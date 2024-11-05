@@ -10,9 +10,11 @@ export default {
 
 <template>
     <footer>
-        <h2>
-            footer
-        </h2>
+        <div class="container">
+            <h2>
+                Footer
+            </h2>
+        </div>
     </footer>
 </template>
 
