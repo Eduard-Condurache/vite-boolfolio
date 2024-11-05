@@ -12,7 +12,7 @@ export default {
             <div class="card text-bg-dark">
                 <div class="card-body">
                     <h5 class="card-title">
-                        Project Title: {{ project.title }}
+                       {{ project.id }}) Project Title: {{ project.title }}
                     </h5>
 
                     <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -40,6 +40,6 @@ export default {
 
 <style scoped>
 .card {
-    height: 200px;
+    min-height: 250px;
 }
 </style>
