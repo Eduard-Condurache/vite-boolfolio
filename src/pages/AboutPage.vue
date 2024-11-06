@@ -1,22 +1,19 @@
 <script>
-
 export default {
     data() {
         return {
-           
+            
         };
-    },
-   
-    methods: {
-        
     },
 };
 </script>
 
 <template>
-    <main>
-        <router-view></router-view>
-    </main>
+    <div class="container">
+        <h2 class="text-center text-primary">
+            ABOUT PAGE!
+        </h2>
+    </div>
 </template>
 
 <style scoped>
