@@ -42,6 +42,8 @@ export default {
 
 <template>
     <main>
+        <router-view></router-view>
+        
         <div class="container">
             <h2 class="text-center mb-3">
                 MAIN

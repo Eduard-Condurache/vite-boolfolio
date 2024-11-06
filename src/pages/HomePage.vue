@@ -9,13 +9,11 @@ export default {
 </script>
 
 <template>
-    <footer>
-        <div class="container">
-            <h2>
-                FOOTER
-            </h2>
-        </div>
-    </footer>
+    <div class="container">
+        <h2 class="text-center text-primary">
+            HOMEPAGE!
+        </h2>
+    </div>
 </template>
 
 <style scoped>
