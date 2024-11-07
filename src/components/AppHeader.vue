@@ -8,8 +8,8 @@ export default {
                     label: 'Home',
                 },
                 {
-                    routeName: 'products',
-                    label: 'Products'
+                    routeName: 'projects',
+                    label: 'Projects'
                 },
                 {
                     routeName: 'about',

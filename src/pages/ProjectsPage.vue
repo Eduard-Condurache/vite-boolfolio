@@ -1,6 +1,6 @@
 <script>
 import axios from 'axios';
-import ProjectCard from '../pages/ProjectCard.vue';
+import ProjectCard from './ProjectCard.vue';
 
 export default {
     data() {
@@ -42,7 +42,7 @@ export default {
 <template>
     <div class="container">
             <h2 class="text-center my-3">
-                Prodotti:
+                Progetti:
             </h2>
 
             <ProjectCard :projects="projects"/>
