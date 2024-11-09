@@ -30,6 +30,14 @@ export default {
                                 {{ technology.name }}
                         </span>
                     </div>
+
+                    <div>
+                        <div>
+                            <router-link :to="{ name: 'projects-show', params: { slug: project.slug }}">
+                                Vedi Progetto
+                            </router-link>
+                        </div>
+                    </div>
                     
                     
                 </div>

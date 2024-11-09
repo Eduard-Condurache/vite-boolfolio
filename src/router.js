@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
     // createWebHistory = simula una cronologia di navigazione.
 import HomePage from './pages/HomePage.vue';
-import ProductsPage from './pages/ProjectsPage.vue';
+import ProjectsPage from './pages/ProjectsPage.vue';
+import SingleProjectPage from './pages/SingleProjectPage.vue';
 import AboutPage from './pages/AboutPage.vue';
 import NotFoundPage from './pages/NotFoundPage.vue';
 
@@ -17,7 +18,12 @@ const router = createRouter({
         {
             path: '/progetti',
             name: 'projects',
-            component: ProductsPage
+            component: ProjectsPage
+        },
+        {
+            path: '/progetti/:slug',
+            name: 'projects-show',
+            component: SingleProjectPage
         },
         {
             path: '/chi-siamo',
