@@ -5,6 +5,7 @@ import ProjectsPage from './pages/ProjectsPage.vue';
 import SingleProjectPage from './pages/SingleProjectPage.vue';
 import AboutPage from './pages/AboutPage.vue';
 import NotFoundPage from './pages/NotFoundPage.vue';
+import ContactPage from './pages/ContactPage.vue';
 
 
 const router = createRouter({
@@ -29,6 +30,11 @@ const router = createRouter({
             path: '/chi-siamo',
             name: 'about',
             component: AboutPage
+        },
+        {
+            path: '/contact',
+            name: 'contact',
+            component: ContactPage
         },
         {
             path: '/:pathMatch(.*)*',
