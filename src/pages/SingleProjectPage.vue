@@ -18,8 +18,13 @@ export default {
                 .get(this.projectsApiUrl + '/' + this.$route.params.slug)
                 .then((resp) => {
                     this.project = resp.data.project;
-                    console.log(this.project);
-                });
+                    
+                })
+                .catch((err) => {
+                    console.error(err);
+
+                    this.$router.push({ name: 'not-found'});
+                })
         }
     },
 };
@@ -27,35 +32,25 @@ export default {
 
 <template>
     <div class="container" v-if="project != null">
-        <div class="card my-4 w-50">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-8">
-                        <h1>
-                            {{ project.title }}
-                        </h1>
-                        <h3>
-                            {{ project.description }}
-                        </h3>
-                        <div>
-                            <span v-for="technology in project.technologies" :key="technology.id" class="badge text-bg-success mx-1">
-                                {{ technology.name }}
-                            </span>
-                        </div>
-                        <div>
-                            <h2>
-                                Type:
-                            </h2>
-
-                            <h4>
-                                {{ project.type.name }}
-                            </h4>
-                            <p>
-                                {{ project.type.description }}
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col">
+        <div class="card my-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img :src="project.full_image_url" class="img-fluid rounded-start" :alt="project.title">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Titolo: {{ project.title }}
+                        </h5>
+                        <p class="card-text">
+                            Descrizione: {{ project.description }}
+                        </p>
+                        <span v-for="technology in project.technologies" :key="technology.id" class="badge text-bg-success mx-1">
+                            {{ technology.name }}
+                        </span>
+                        <p class="card-text">
+                            Tipo: {{ project.type.name }} - {{ project.type.description }}
+                        </p>
                         <router-link :to="{ name: 'projects' }">
                             <button class="btn btn-primary">
                                 Torna ai progetti
