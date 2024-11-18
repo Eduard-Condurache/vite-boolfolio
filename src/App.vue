@@ -34,4 +34,5 @@ export default {
 @import "bootstrap/scss/bootstrap";
 @import './styles/main';
 
+
 </style>
